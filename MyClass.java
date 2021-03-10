@@ -11,8 +11,8 @@ class MyClass {
         ali.add(2);
         ali.add(4);
         ali.add(3);
-        Stream<Integer> stri = ali.stream().sorted().filter(n -> n % 2 == 1)
-                .filter(n -> n > 1);
+        Stream<Integer> stri = ali.stream().sorted().filter(n -> n % 2 == 0)
+                .filter(n -> n > 2);
         Spliterator<Integer> spl = stri.spliterator();
         spl.forEachRemaining(System.out::println);
 //        TreeMap <String,Integer> salary = new TreeMap<>(Comparator.comparing(Function.identity(), String::compareTo));
